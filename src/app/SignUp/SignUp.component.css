@@ -1,0 +1,29 @@
+.example-radio-button{margin-left: 7px;}
+mat-grid-tile {
+  background:#fafafa;
+}
+.width-50{width: 49%;}
+.ml-1{margin-left: 1%;}
+.ml-2{margin-left: 2%;}
+.width-100{width: 100%;}
+.width-25{width: 25%;}
+
+.lab{
+  color: rgb(66, 66, 207);
+  position: middle;
+  padding: 15px;
+  font-size: large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+
+}
+.imm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  image-rendering: auto;
+}
+.move{
+  margin-left:1rem;
+}

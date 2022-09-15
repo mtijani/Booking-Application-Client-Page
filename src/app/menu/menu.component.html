@@ -1,0 +1,25 @@
+
+
+<mat-toolbar color="primary"   rowHeight="700px" class="toolbar">
+
+  <a mat-button routerLink="" class="btn btn-primary"><mat-icon>hotel</mat-icon> Save Your room</a>
+  <a mat-button class="btn btn-primary">Rooms</a>
+
+  <span class="example-spacer"></span>
+  <a mat-button class="btn btn-primary" routerLink="SignUp" *ngIf="!userIsAuthenticated"> Create Account </a>
+  <a mat-button class="btn btn-primary" routerLink="Login" *ngIf="!userIsAuthenticated" > Login </a>
+
+
+
+
+  <button mat-button [matMenuTriggerFor]="menu" *ngIf="userIsAuthenticated" >Welcome {{name}}</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink=""   >View profile</button>
+  <button mat-menu-item routerLink="/Login" (click)="onLogout()"  *ngIf="userIsAuthenticated">Log out</button>
+</mat-menu>
+  <!-- <mat-label *ngIf="!isLoggedIn==true" >Welcome {{name}}</mat-label> -->
+  <!-- <a mat-button class="btn btn-primary" routerLink="" (click)="logOut()"  *ngIf="!isLoggedIn==true "   > Log Out </a> -->
+
+
+</mat-toolbar>
+

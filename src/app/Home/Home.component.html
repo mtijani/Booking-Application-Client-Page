@@ -1,0 +1,129 @@
+<div class="center">
+<h2>Search Rooms</h2>
+<form [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter a room Type</mat-label>
+    <input  formControlName="type" #textbox matInput>
+
+  </mat-form-field>
+  <a mat-button (click)="check(textbox.value)"><mat-icon>search</mat-icon> </a>
+
+</form>
+</div>
+<div class="container">
+    <div class="row">
+
+      <div class="col-lg-6 mb-4" *ngFor="let item of ItemsArray" >
+        <div class="row justify-content-center mt-5">
+        <div class="row bs col-lg-9">
+       <div class="row justify-content-center mt-5">
+       <div class="col-md-5">
+
+       <img src={{item.ImageUrl}} class="smalling">
+
+      </div>
+      <div class="col-md-7">
+       <h1>Room Name :</h1>
+       <h2>{{item.RoomName}}</h2>
+       <b><p>Max Count : {{item.Price}} TTC</p></b>
+       <mat-label>Availability :</mat-label>
+       <b><p>From: {{item.From | date : 'dd/MM/YYYY'}} </p></b>
+       <b><p>To : {{item.To | date:'dd/MM/YYYY'}} </p></b>
+
+       <!-- <p>Phone Number : 58 843 686</p> -->
+       <p>Type : {{item.Type}}  </p>
+       <div style="float:right">
+         <button mat-button class="btn btn-primary"  (click)="openDialog(item._id); RemoveId(item._id)"  >View Details</button>
+       </div>
+       </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cards-container">
+      <div class="col-md-6">
+
+      </div>
+
+      </div>
+      <!-- <div class="col">
+        <div class="row justify-content-center mt-5">
+        <div class="row bs">
+       <div class="row justify-content-center mt-5">
+       <div class="col-md-4">
+
+       <img src="/assets/hotell.jpg" class="smalling">
+
+      </div>
+      <div class="col-md-7">
+       <h1>Room Name</h1>
+       <b><p>Max Count : 17.8$</p></b>
+       <p>Phone Number : 58 843 686</p>
+       <p>Type : Deluxe  </p>
+       <div style="float:right">
+         <button mat-button class="btn btn-primary">View Details</button>
+       </div>
+       </div>
+        </div>
+      </div>
+      </div>
+    </div>
+      <div class="w-100"></div>
+      <div class="col">
+        <div class="row justify-content-center mt-5">
+        <div class="row bs">
+       <div class="row justify-content-center mt-5">
+       <div class="col-md-4">
+
+       <img src="/assets/hotell.jpg" class="smalling">
+
+      </div>
+      <div class="col-md-7">
+       <h1>Room Name</h1>
+       <b><p>Max Count : 17.8$</p></b>
+       <p>Phone Number : 58 843 686</p>
+       <p>Type : Deluxe  </p>
+       <div style="float:right">
+         <button mat-button class="btn btn-primary">View Details</button>
+       </div>
+       </div>
+        </div>
+      </div>
+      </div>
+    </div>
+      <div class="col">
+
+        <div class="row justify-content-center mt-5">
+          <div class="row bs">
+            <div class="row justify-content-center mt-5">
+          <div class="col-md-4">
+
+            <img src="https://images.oyoroomscdn.com/uploads/hotel_image/56303/medium/597f0e48823f8885.jpg"
+                        class="smalling">
+
+          </div>
+          <div class="col-md-7">
+            <h1>Room Name</h1>
+            <b><p>Max Count : 17.8$</p></b>
+            <p>Phone Number : 58 843 686</p>
+            <p>Type : Deluxe  </p>
+            <div style="float:right">
+            <button mat-button class="btn btn-primary" (click)="openDialog()">View Details</button>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          </div>
+
+    </div> -->
+    <div class="w-100"></div>
+
+
+    </div>
+
+  </div>
+
+
+

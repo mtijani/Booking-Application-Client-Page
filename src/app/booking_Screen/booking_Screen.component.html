@@ -1,0 +1,65 @@
+<!-- <div>
+  <div class="row">
+    <div class="col-md-7">
+      <h2>Room SPA</h2>
+      <img src="https://images.oyoroomscdn.com/uploads/hotel_image/56303/medium/597f0e48823f8885.jpg" class="bigimg"/>
+
+    </div>
+    <div class="col-md-7">
+      <h2>Booking Details</h2>
+      <hr/>
+      <p>Name :</p>
+      <p>From Date :</p>
+      <p>To Date :</p>
+      <p>Price :</p>
+    </div>
+  </div>
+</div> -->
+<div class="m-5">
+<div class="container">
+  <div class="row justify-content-center mt-5 bs">
+    <div class="col">
+      <h3>{{RoomName}}</h3>
+      <img src="{{image}}" class="bigimg"/>
+    </div>
+    <div class="col" >
+      <div style="text-align: right;">
+      <b>
+      <h3>Booking Details</h3>
+      <hr/>
+      <p>Name : {{RoomName}}</p>
+      <p>From Date : {{From  | date:'dd/MM/YYYY'}}</p>
+      <p>To Date :{{To  | date:'dd/MM/YYYY'}}</p>
+      <p>Price : {{Price}}</p>
+    </b>
+    <form  [formGroup]="form">
+
+    <p>Chose your Plan</p>
+    <mat-form-field  appearance="fill">
+      <mat-select formControlName="Plan" placeholder="Select a plan">
+        <mat-option *ngFor="let plan of plans" [value]="plan">
+          {{plan}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </form>
+  </div>
+    <div style="text-align: right;">
+      <h1>Amount</h1>
+      <hr/>
+      <p> Total days : {{totalDays}}</p>
+      <p>Rent Per day : {{Price}}</p>
+      <button mat-button color="primary" (click)="getPrice()">Get Total amount</button>
+
+      <p>Total amount : {{totalAmount}} $</p>
+
+    </div>
+    <br>
+    <div style="float: right;" >
+      <button mat-button color="primary" class="pay" style="background-color: rgb(235, 235, 241);">Pay now</button>
+    </div>
+    </div>
+
+  </div>
+  </div>
+</div>

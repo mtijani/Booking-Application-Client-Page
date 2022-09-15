@@ -1,0 +1,26 @@
+mat-toolbar{
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
+  z-index: 1000;
+}
+.flexExpand {
+  flex: 1 1 auto;
+}
+mat-button{
+  background-color: rgb(20, 21, 22);
+}
+.login{
+  position: right;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.width-50{width: 49%;}
+.ml-1{margin-left: 1%;}
+.ml-2{margin-left: 2%;}
+.width-100{width: 100%;}
+.width-25{width: 25%;}
+/* .tool-bar{
+  background-color: black ;
+} */
